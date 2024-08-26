@@ -47,7 +47,7 @@ def cost(tea_count: int, treat_count: int) -> float:
     """return function"""
     return float(
         (tea_count * 0.50) + (treat_count * 0.75)
-    )  # getting error or arguement missing for parameter, but it was because my return function was wrong
+    )  # getting error, fixed by changing return
 
 
 if __name__ == "__main__":
