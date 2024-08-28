@@ -2,10 +2,9 @@
 
 __author__: str = "730643371"
 
-"""Defining main planner function."""
-
 
 def main_planner(guests: int) -> None:
+    """Defining main planner function."""
     print(
         "A Cozy Tea Party for " + str(guests) + " People!"
     )  # this works but the rest do not
@@ -19,6 +18,7 @@ def main_planner(guests: int) -> None:
             cost(tea_count=tea_bags(people=guests), treat_count=treats(people=guests))
         )
     )  # needed more parenthesis here
+    return None
 
 
 # Yipeeeeee it runs now
@@ -37,7 +37,9 @@ def tea_bags(people: int) -> int:
 
 def treats(people: int) -> int:
     """return function."""
-    return int(tea_bags(people) * 1.5)  # took some thought to realize I needed int()
+    return int(
+        tea_bags(people=people) * 1.5
+    )  # took some thought to realize I needed int()
 
 
 """Defining the cost function."""
