@@ -1,10 +1,18 @@
-def make_jersey(name: str, number: int) -> str:
-    print(name + " is number " + str(jersey_num(number=number)))
-    return name + ":" + str(number + 1)
+def greet(name: str) -> None:
+    print("I'm so happy to see you " + name + "!")
+    print(
+        "Hello "
+        + name
+        + ", your name starts with an "
+        + str(name[0])
+        + " and ends with an "
+        + str(name[len(name) - 1])
+    )
 
 
-def jersey_num(number: int) -> int:
-    return number + 1
+def main() -> None:
+    print(greet(name="Molly"))
 
 
-print(make_jersey(name="Lytle", number=7))
+# Example usage:
+main()
